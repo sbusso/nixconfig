@@ -60,15 +60,6 @@ build: ## Build the configuration
 switch: ## Apply the new configuration
 	@echo "Switching to the new Nix-Darwin configuration..."
 	./result/sw/bin/darwin-rebuild switch --flake "$$(pwd)#${NIXNAME}" --show-trace
-	# @echo "Activating the new Home Manager configuration..."
-	# @./result/activate
-
-	# ifeq ($(UNAME), Darwin)
-	# 	nix build --extra-experimental-features nix-command --extra-experimental-features flakes ".#darwinConfigurations.${NIXNAME}.system"
-	# 	./result/sw/bin/darwin-rebuild switch --flake "$$(pwd)#${NIXNAME}"
-	# else
-	# 		sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild switch --flake ".#${NIXNAME}"
-	# endif
 
 .PHONY: update
 update: ## Update the flake.lock file

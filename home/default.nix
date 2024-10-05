@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  unstable,
   user,
   isWSL,
   inputs,
@@ -61,7 +62,7 @@ in {
 
   imports = [
     (import ./packages.nix { inherit pkgs inputs; })
-    (import ./programs { inherit config lib pkgs user inputs; })
+    (import ./programs { inherit config lib pkgs user inputs unstable; })
   ];
 
 
@@ -70,9 +71,12 @@ in {
   xdg = {
     enable = true;
 
-    cacheHome  = "${user.homeDirectory}/.xdg/cache";
-    configHome = "${user.homeDirectory}/.xdg/config";
-    dataHome   = "${user.homeDirectory}/.xdg/local/share";
+    # cacheHome  = "${user.homeDirectory}/.xdg/cache";
+    # configHome = "${user.homeDirectory}/.xdg/config";
+    # dataHome   = "${user.homeDirectory}/.xdg/local/share";
+    cacheHome  = "${config.home.homeDirectory}/.cache";
+    configHome = "${config.home.homeDirectory}/.config";
+    dataHome   = "${config.home.homeDirectory}/.local/share";
 
     # TODO: Check if we can use this pattern and offer a way to override it
     # configFile = with config.lib.file; {
@@ -91,12 +95,6 @@ in {
   # manual.manpages.enable = true;
   # programs.man.enable = false; # needed so that host OS man pages remain accessible
 
-
-
-  programs.helix = {
-    enable = true;
-
-   };
 
   programs.ssh = {
     enable = true;
@@ -204,7 +202,7 @@ in {
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".config/zed/settings.json".source = ./programs/zed/settings.json;
+    ".config/zed/settings.json".source = ./dotfiles/zed/settings.json;
 
   };
 

@@ -25,10 +25,10 @@ let
     zoxide # Better cd
     # tmux
     bash # Newer version of bash
-    wezterm
+    # wezterm
     ripgrep # Better grep
     fd # Better find
-    bat # Better cat
+    # bat # Better cat
     fzf # Fuzzy finder
     jq # JSON processor
     yq # YAML processor
@@ -75,10 +75,10 @@ let
   ];
 
   gitTools = [
-    git
+    # git
     git-crypt
     diff-so-fancy
-    lazygit
+    # lazygit
   ];
 
   goTools = [
@@ -100,7 +100,7 @@ let
     # lua54Packages.lua
     # lua54Packages.luarocks
 
-    helix
+    # helix
     tree-sitter
   ];
 
@@ -109,7 +109,8 @@ let
     # basedpyright
     black
     pdm
-    pur
+    poetry
+    # pur
     ruff
 
     python312

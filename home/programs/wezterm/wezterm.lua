@@ -2,8 +2,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
 
--- config.enable_tab_bar = false
-
 config.automatically_reload_config = true
 config.enable_tab_bar = false
 config.window_close_confirmation = "NeverPrompt"

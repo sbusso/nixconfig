@@ -32,10 +32,10 @@
     ShowDate   = 1;
     ShowDayOfMonth = true;
     ShowDayOfWeek  = true;
-    ShowSeconds    = true;
+    ShowSeconds    = false;
   };
 
   system.defaults.CustomUserPreferences."com.apple.menuextra.clock" = {
-    FlashDateSeparators = true;
+    FlashDateSeparators = false;
   };
 }

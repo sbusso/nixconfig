@@ -1,6 +1,6 @@
 # This function creates a NixOS system based on our VM setup for a
 # particular architecture.
-{ nixpkgs, overlays, inputs }:
+{ nixpkgs, overlays, inputs, nixpkgs-unstable }:
 
 platform:
 {
@@ -23,6 +23,13 @@ let
   # NixOS vs nix-darwin functionst
   systemFunc = if darwin then inputs.darwin.lib.darwinSystem else nixpkgs.lib.nixosSystem;
   home-manager = if darwin then inputs.home-manager.darwinModules else inputs.home-manager.nixosModules;
+
+  # Create the unstable package set
+  pkgs-unstable = import nixpkgs-unstable {
+    inherit system;
+    config.allowUnfree = true;
+  };
+
 in systemFunc rec {
   inherit system;
 
@@ -44,6 +51,7 @@ in systemFunc rec {
       home-manager.useUserPackages = true;
       home-manager.users.${accountName} = { config, lib, pkgs, ... }: import userHMConfig {
               inherit config lib pkgs isWSL inputs isDarwin;
+              unstable = pkgs-unstable;
               user = user;
             };
     }
@@ -59,6 +67,7 @@ in systemFunc rec {
         user = user;
         isWSL = isWSL;
         isDarwin = isDarwin;
+        unstable = pkgs-unstable;
         # inputs = inputs;
       };
     }

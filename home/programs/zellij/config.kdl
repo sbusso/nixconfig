@@ -1,4 +1,4 @@
-theme = "catppuccin-mocha";
+theme "catppuccin-mocha";
 ui {
   pane_frames {
     hide_session_name false

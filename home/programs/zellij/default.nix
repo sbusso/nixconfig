@@ -8,7 +8,7 @@
   };
 
   xdg.configFile = {
-    "zellij/config.kdl".source = ./config.kdl;
+    "zellij".source = ./config.kdl;
     # "zellij/layouts/riced.kdl".text = import ./layouts/riced.kdl.nix { inherit pkgs inputs; };
     # "zellij/layouts/riced.swap.kdl".source = ./layouts/riced.swap.kdl;
     # "zellij/themes".source = ./themes;

@@ -71,7 +71,7 @@
   '';
 
   security = {
-    pam.enableSudoTouchIdAuth = true;
+    # pam.enableSudoTouchIdAuth = true;
 
     # register additional (MITM) certificates
     pki.certificateFiles = [

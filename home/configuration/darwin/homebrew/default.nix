@@ -25,7 +25,7 @@
     "bmon"
     # "sketchybar"
     "borders"
-    "helix"
+    # "helix"
 
 
     # sketchybar helpers
@@ -96,7 +96,7 @@
       }
       # "jetbrains-toolbox"
       "keycastr"
-      "kitty"
+      # "kitty"
       "localsend"
       # {
       #   name = "logitech-options";
@@ -131,7 +131,7 @@
       # "teamviewer"
       "tuple"
       "vlc"
-      "wezterm"
+      # "wezterm"
       {
         # Zoom must also be installed under /Applications
         name = "zoom";
@@ -144,8 +144,6 @@
       "superproductivity"
       "transmission"
       "wireshark"
-
-      "zoom"
       "yaak"
       "font-jetbrains-mono"
       "font-hack-nerd-font"
@@ -155,7 +153,7 @@
     ];
 
     caskArgs = {
-      appdir = "~/Applications/Homebrew Apps";
+      # appdir = "~/Applications/Homebrew Apps";
       no_quarantine = true;
       require_sha = true;
     };

@@ -47,6 +47,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     darwin,
     agenix,
@@ -68,7 +69,7 @@
     ];
 
     mkSystem = import ./lib/mksystem.nix {
-      inherit overlays nixpkgs inputs;
+      inherit overlays nixpkgs nixpkgs-unstable inputs;
     };
 
 

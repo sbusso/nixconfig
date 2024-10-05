@@ -1,4 +1,4 @@
-{ config, user, pkgs, inputs, ... }:
+{ config, user, pkgs, inputs, unstable, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
     ./ripgrep
     ./silicon
     ./tmux
-    ./wezterm
+    (import ./wezterm { inherit unstable; })
     ./yazi
     (import ./zellij { inherit config user inputs pkgs; })
     ./zoxide
