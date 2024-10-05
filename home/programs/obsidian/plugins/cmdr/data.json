@@ -1,0 +1,60 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [
+    {
+      "id": "obsidian-git:open-diff-view",
+      "icon": "github",
+      "name": "Obsidian Git: Open diff view",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:list-changed-files",
+      "icon": "github",
+      "name": "Obsidian Git: List changed files",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:commit-staged-specified-message",
+      "icon": "github",
+      "name": "Obsidian Git: Commit staged with specific message",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:commit-specified-message",
+      "icon": "github",
+      "name": "Obsidian Git: Commit all changes with specific message",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-git:push2",
+      "icon": "github",
+      "name": "Obsidian Git: Push",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": "8",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

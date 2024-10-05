@@ -1,0 +1,7 @@
+{ pkgs }:
+
+{
+  sharedPackages = with pkgs; [
+
+  ];
+}
